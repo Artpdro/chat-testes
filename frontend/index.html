@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I.A provisoria de testes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="app">
+
+  <!-- ════════════════════════════════════════════
+       SIDEBAR
+  ═════════════════════════════════════════════ -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-top">
+      <div class="brand">
+        <span class="brand-mark">◈</span>
+        <span class="brand-label">I.A provisoria de testes</span>
+      </div>
+      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Recolher menu">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Módulos — preenchido pelo JS -->
+    <nav class="mod-nav" id="mod-nav"></nav>
+
+    <div class="sidebar-bottom">
+      <span class="sidebar-version">v2.0 · BR</span>
+    </div>
+
+  </aside>
+
+  <!-- ════════════════════════════════════════════
+       COLUNA PRINCIPAL
+  ═════════════════════════════════════════════ -->
+  <div class="main-col">
+
+    <!-- Top bar -->
+    <header class="top-bar">
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <div class="top-crumb" id="top-crumb">
+        <span class="crumb-icon" id="crumb-icon">◈</span>
+        <span class="crumb-label" id="crumb-label">Início</span>
+      </div>
+      <div class="top-badges">
+        <span class="tbadge">BCB</span>
+        <span class="tbadge">IBGE</span>
+        <span class="tbadge">CVM</span>
+      </div>
+    </header>
+
+    <!-- Chat -->
+    <main class="chat-main">
+
+      <div class="chat-scroll" id="chat-scroll">
+        <div class="chat-inner">
+
+          <!-- Welcome — renderizado pelo JS -->
+          <div id="welcome" class="welcome"></div>
+
+          <!-- Mensagens -->
+          <div id="messages"></div>
+
+        </div>
+      </div>
+
+      <!-- Input zone -->
+      <div class="input-zone">
+        <div class="input-inner">
+          <div class="chips-row" id="chips-row"></div>
+          <div class="input-bar">
+            <textarea
+              id="user-input"
+              placeholder="Descreva sua necessidade…"
+              rows="1"
+              autocomplete="off"
+              spellcheck="true"
+            ></textarea>
+            <button id="send-btn" aria-label="Enviar">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"/>
+                <polyline points="5 12 12 5 19 12"/>
+              </svg>
+            </button>
+          </div>
+          <p class="input-hint">Enter para enviar · Shift+Enter para nova linha</p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ════════════════════════════════════════
+         PAINEL INFERIOR
+    ═════════════════════════════════════════ -->
+    <div class="info-panel collapsed" id="info-panel">
+
+      <div class="panel-bar">
+        <div class="panel-tabs" id="panel-tabs"></div>
+        <div class="panel-controls">
+          <span class="panel-meta" id="panel-meta"></span>
+          <button class="panel-toggle-btn" id="panel-toggle" aria-label="Expandir painel">
+            <svg id="toggle-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="18 15 12 9 6 15"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel-body" id="panel-body">
+        <div class="pane-empty">Faça uma pergunta para ver os resultados aqui.</div>
+      </div>
+
+    </div>
+
+  </div><!-- /main-col -->
+
+</div><!-- /app -->
+
+<!-- Markdown: marked.js via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/marked.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
