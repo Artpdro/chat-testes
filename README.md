@@ -229,7 +229,3 @@ http://localhost:8000/docs
 # Health check
 curl http://localhost:8000/health
 ```
-
-## Licença
-
-MIT
